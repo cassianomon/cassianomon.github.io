@@ -19,7 +19,7 @@ jobs:
       - run: npm run export
         env:
           CI: true
-          DEPLOY_TARGET: gh-pages
+          DEPLOY_TARGET: deploy
       - run: touch out/.nojekyll
 
       - name: Deploy
