@@ -2,7 +2,7 @@
   "name": "cassianomon.github.io",
   "version": "1.0.0",
   "author": "Cassiano Montanari <cassianomontanari@gmail.com>",
-  "homepage": "cassianomon.github.io",
+  "homepage": "https://github.com/cassianomon/cassianomon.github.io#readme",
   "private": true,
   "scripts": {
     "dev": "next -p 3000",
