@@ -10,8 +10,8 @@ const HeaderStyles = styled.header`
 
 export default function Header() {
   return (
-    <header>
+    <HeaderStyles>
       <Nav />
-    </header>
+    </HeaderStyles>
   );
 }
