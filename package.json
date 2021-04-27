@@ -1,6 +1,8 @@
 {
   "name": "cassianomon.github.io",
   "version": "1.0.0",
+  "author": "Cassiano Montanari <cassianomontanari@gmail.com>",
+  "homepage": "cassianomon.github.io",
   "private": true,
   "scripts": {
     "dev": "next -p 3000",
@@ -9,7 +11,6 @@
     "test": "NODE_ENV=test jest --watch",
     "export": "next export"
   },
-  "author": "Cassiano Montanari <cassianomontanari@gmail.com>",
   "license": "ISC",
   "dependencies": {
     "next": "10.1.3",
