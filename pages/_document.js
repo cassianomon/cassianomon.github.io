@@ -16,6 +16,9 @@ export default class MyDocument extends Document {
   render() {
     return (
       <Html lang={Config.locale}>
+        <Head>
+          <base href="/" />
+        </Head>
         <body>
           <Main />
           <NextScript />
