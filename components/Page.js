@@ -1,7 +1,7 @@
 import styled from 'styled-components';
+// import GlobalStyles from '../styles/GlobalStyles';
 
 import Header from './Header';
-import GlobalStyles from '../styles/Global';
 
 const InnerStyles = styled.div`
   max-width: var(--maxWidth);
@@ -12,7 +12,7 @@ const InnerStyles = styled.div`
 export default function Page({ children }) {
   return (
     <div>
-      <GlobalStyles />
+      {/* <GlobalStyles /> */}
       <Header />
       <InnerStyles>{children}</InnerStyles>
     </div>
