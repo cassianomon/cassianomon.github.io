@@ -8,12 +8,13 @@ const InnerStyles = styled.div`
   margin: 0 auto;
   padding: 2rem;
 `;
+
 export default function Page({ children }) {
   return (
     <div>
       <GlobalStyles />
       <Header />
-      <InnerStyles>{children}</InnerStyles>
+      {/* <InnerStyles>{children}</InnerStyles> */}
     </div>
   );
 }
