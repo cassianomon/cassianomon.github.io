@@ -1,5 +1,5 @@
-const ghPages = process.env.DEPLOY_TARGET === "gh-pages";
+const ghPages = process.env.DEPLOY_TARGET === 'deploy';
 
 module.exports = {
-  assetPrefix: ghPages ? "/cassianomon.github.io/" : "",
+  assetPrefix: ghPages ? '/cassianomon.github.io/' : '',
 };

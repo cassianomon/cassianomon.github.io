@@ -11,12 +11,20 @@
 # next.js
 /.next/
 /out/
+/bundles
 
 # production
 /build
+/dist
 
 # misc
+# misc
 .DS_Store
+Thumbs.db
+next-env.d.ts
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
 *.pem
 
 # debug
