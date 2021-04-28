@@ -5,17 +5,32 @@ import { ServerStyleSheet } from 'styled-components';
 import Config from '../config';
 
 /* eslint-disable react/jsx-props-no-spreading */
-
 export default class MyDocument extends Document {
-  static async getInitialProps({ renderPage }) {
+  static async getInitialProps(ctx) {
     const sheet = new ServerStyleSheet();
-    const page = renderPage((App) => (props) =>
-      sheet.collectStyles(<App {...props} />)
-    );
+    const originalRenderPage = ctx.renderPage;
 
-    const styleTags = sheet.getStyleElement();
+    try {
+      ctx.renderPage = () =>
+        originalRenderPage({
+          enhanceApp: (App) => (props) =>
+            sheet.collectStyles(<App {...props} />),
+        });
 
-    return { ...page, styleTags };
+      const initialProps = await Document.getInitialProps(ctx);
+
+      return {
+        ...initialProps,
+        styles: (
+          <>
+            {initialProps.styles}
+            {sheet.getStyleElement()}
+          </>
+        ),
+      };
+    } finally {
+      sheet.seal();
+    }
   }
 
   render() {
