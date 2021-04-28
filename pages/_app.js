@@ -1,13 +1,24 @@
 import Page from '../components/Page';
-import GlobalStyles from '../styles/GlobalStyles';
 
-export default function myApp({ Component, pageProps }) {
+function MyApp({ Component, pageProps }) {
   return (
     <>
-      <GlobalStyles />
       <Page>
         <Component {...pageProps} />
       </Page>
     </>
   );
 }
+
+MyApp.getInitialProps = async function ({ Component, ctx }) {
+  let pageProps = {};
+
+  if (Component.getInitialProps) {
+    pageProps = await Component.getInitialProps(ctx);
+  }
+
+  pageProps.query = ctx.query;
+  return { pageProps };
+};
+
+export default MyApp;
