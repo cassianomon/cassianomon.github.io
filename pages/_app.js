@@ -10,15 +10,15 @@ function MyApp({ Component, pageProps }) {
   );
 }
 
-// MyApp.getInitialProps = async ({ Component, ctx }) => {
-//   let pageProps = {};
+MyApp.getInitialProps = async ({ Component, ctx }) => {
+  let pageProps = {};
 
-//   if (Component.getInitialProps) {
-//     pageProps = await Component.getInitialProps(ctx);
-//   }
+  if (Component.getInitialProps) {
+    pageProps = await Component.getInitialProps(ctx);
+  }
 
-//   pageProps.query = ctx.query;
-//   return { pageProps };
-// };
+  pageProps.query = ctx.query;
+  return { pageProps };
+};
 
 export default MyApp;
