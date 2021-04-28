@@ -1,4 +1,7 @@
+import PropTypes from 'prop-types';
 import Page from '../components/Page';
+
+/* eslint-disable react/jsx-props-no-spreading */
 
 function App({ Component, pageProps }) {
   return (
@@ -11,3 +14,8 @@ function App({ Component, pageProps }) {
 }
 
 export default App;
+
+App.propTypes = {
+  Component: PropTypes.any,
+  pageProps: PropTypes.any,
+};
