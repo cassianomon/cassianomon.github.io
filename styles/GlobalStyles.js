@@ -7,7 +7,6 @@ const GlobalStyles = createGlobalStyle`
     font-weight: normal;
     font-style:normal;
   }
-
   html {
     --red: #FF0000;
     --black: #282828;
@@ -21,19 +20,16 @@ const GlobalStyles = createGlobalStyle`
     box-sizing: border-box;
     font-size: 10px;
   }
-
   *, *:before, *:after {
     box-sizing: inherit;
   }
-
   body {
-    font-family: --apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family: 'radnika_next',--apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     padding: 0;
     margin: 0;
     font-size: 1.5rem;
     line-height: 2;
   }
-
   a {
     text-decoration: none;
     color: var(--black);
@@ -41,9 +37,8 @@ const GlobalStyles = createGlobalStyle`
       text-decoration: underline;
     }
   }
-
   button {
-    font-family: --apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family: 'radnika_next',--apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   }
 `;
 
