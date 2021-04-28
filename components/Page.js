@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-// import GlobalStyles from '../styles/GlobalStyles';
 
 import Header from './Header';
 
@@ -12,7 +11,6 @@ const InnerStyles = styled.div`
 export default function Page({ children }) {
   return (
     <div>
-      {/* <GlobalStyles /> */}
       <Header />
       <InnerStyles>{children}</InnerStyles>
     </div>
